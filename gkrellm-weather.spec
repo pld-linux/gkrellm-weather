@@ -2,7 +2,7 @@ Summary:	A weather plugin for gkrellm
 Summary(pl):	Plugin pokazuj±cy pogodê dla gkrellm
 Summary(pt_BR):	Um plugin gkrellm para acompanhamento das condições climáticas
 Name:		gkrellm-weather
-Version:	0.2.3a
+Version:	0.2.7
 Release:	1
 License:	GPL
 Group:		X11/Applications/Networking
