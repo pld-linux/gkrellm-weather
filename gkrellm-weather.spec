@@ -1,6 +1,5 @@
-Summary:	a weather plugin for gkrellm
-Summary(es):	a weather plugin for gkrellm
-Summary(pl):	plugin pokazuj±cy pogodê dla gkrellm
+Summary:	A weather plugin for gkrellm
+Summary(pl):	Plugin pokazuj±cy pogodê dla gkrellm
 Summary(pt_BR):	Um plugin gkrellm para acompanhamento das condições climáticas
 Name:		gkrellm-weather
 Version:	0.2.3a
@@ -32,31 +31,18 @@ GKrellWeather is a weather plugin for GKrellM. Its features include:
   - Display pressure in kPa, hPa and mmHg
   - Display wind speeds in kmph, mps and beaufort scale
 
-%description -l es
-GKrellWeather is a weather plugin for GKrellM. Its features include:
-
-  - Choose your own location by 4-letter METAR station identifier code.
-  - Monitor temperature, dew point, pressure, relative humidity, sky
-    condition, wind direction and speed
-  - Display using imperial units (degrees Fareheight, inches of Mercury,
-    miles per hour)
-  - Display using metric units (degrees Celsius, millimeters of Mercury,
-    kilometers per hour)
-  - Display pressure in kPa, hPa and mmHg
-  - Display wind speeds in kmph, mps and beaufort scale
-
 %description -l pl
-GKrellWeather jest plugin'em pokazuj±cym pogodê w GKrellM. Jego
+GKrellWeather jest pluginem pokazuj±cym pogodê w GKrellM. Jego
 w³asno¶ci:
 
   - Wybieranie lokalizacji poprzez 4-literowy kod METAR.
   - Monitorowanie temperatury, dew point, ci¶nienia, wilgotno¶ci, stanu
     zachmurzenia, prêdko¶ci i kierunku wiatru.
   - Wy¶wietlanie przy u¿yciu systemu miar anglosaskich (stopnie
-    Fareheight'a, cale s³upa rtêci, mile na godzinê) jak i metrycznego
-    (stopnie Celsiusza, milimetry s³upa rtêci, kilometry na godzinê)
+    Fareheighta, cale s³upa rtêci, mile na godzinê) jak i metrycznego
+    (stopnie Celsjusza, milimetry s³upa rtêci, kilometry na godzinê)
   - wy¶wietlanie ci¶nienia w kPa, hPa i mmHg
-  - wy¶wietlanie prêdko¶ci wiatru w km/h, m/s i w skali Beaufort'a
+  - wy¶wietlanie prêdko¶ci wiatru w km/h, m/s i w skali Beauforta
 
 %description -l pt_BR
 Um plugin gkrellm para acompanhamento das condições climáticas,
