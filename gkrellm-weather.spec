@@ -73,13 +73,11 @@ install -d $RPM_BUILD_ROOT{%{_libdir}/gkrellm2,%{_bindir}}
 	LIBDIR=%{_libdir}/gkrellm2 \
 	BINDIR=%{_bindir} install
 
-gzip -9nf README ChangeLog
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc *.gz
+%doc README ChangeLog
 %attr(644,root,root) %{_libdir}/gkrellm2/gkrellweather.so
 %attr(755,root,root) %{_bindir}/GrabWeather
