@@ -1,55 +1,16 @@
-diff -u gkrellweather-2.0.5.old/Makefile gkrellweather-2.0.5/Makefile
---- gkrellweather-2.0.5.old/Makefile	Tue Nov 26 21:25:01 2002
-+++ gkrellweather-2.0.5/Makefile	Wed Jan 22 16:07:17 2003
-@@ -8,6 +8,10 @@
- 
- OBJS = gkrellweather.o
- 
-+BINDIR=/usr/bin
-+LIBDIR=/usr/lib
-+
-+
- gkrellweather.so: $(OBJS)
- 	$(CC) $(OBJS) -DVERSION=\"$(VERSION)\" -o gkrellweather.so $(LFLAGS) $(LIBS)  -lpthread
- 
-@@ -18,19 +22,19 @@
- 	$(CC) $(CFLAGS) -DVERSION=\"$(VERSION)\" -c gkrellweather.c
- 
- install:
--	if [ -d /usr/lib/gkrellm2/plugins/ ] ; then \
--		install -c -s -m 644 gkrellweather.so /usr/lib/gkrellm2/plugins/ ; \
-+	if [ -d $(DESTDIR)$(LIBDIR)/gkrellm2 ] ; then \
-+		install -c -D -s -m 755 gkrellweather.so $(DESTDIR)$(LIBDIR)/gkrellm2/plugins/gkrellweather.so ; \
- 	elif [ -d /usr/local/lib/gkrellm2/plugins/ ] ; then \
- 		install -c -s -m 644 gkrellweather.so /usr/local/lib/gkrellm2/plugins/ ; \
- 	else \
- 		install -D -c -s -m 644 gkrellweather.so /usr/local/lib/gkrellm2/plugins/gkrellweather.so ; \
- 	fi
--	install -c -m 755 GrabWeather /usr/local/bin
-+	install -c -D -m 755 GrabWeather $(DESTDIR)$(BINDIR)/GrabWeather
- 
- uninstall:
- 	rm -f /usr/lib/gkrellm2/plugins/gkrellweather.so
- 	rm -f /usr/local/lib/gkrellm2/plugins/gkrellweather.so
--	rm -f /usr/local/bin/GrabWeather
-+	rm -f /usr/local/bin/GrabWeather $(BINDIR)/GrabWeather
- 
- dist:
- 	rm -rf $(PKGNAME)-$(VERSION)
-Only in gkrellweather-2.0.5: Makefile~
-diff -u gkrellweather-2.0.5.old/gkrellweather.c gkrellweather-2.0.5/gkrellweather.c
---- gkrellweather-2.0.5.old/gkrellweather.c	Tue Nov 26 21:25:01 2002
-+++ gkrellweather-2.0.5/gkrellweather.c	Wed Jan 22 16:06:12 2003
+diff -ur gkrellweather-2.0.6.orig/gkrellweather.c gkrellweather-2.0.6/gkrellweather.c
+--- gkrellweather-2.0.6.orig/gkrellweather.c	Mon Mar 31 11:12:57 2003
++++ gkrellweather-2.0.6/gkrellweather.c	Sat May 10 20:40:27 2003
 @@ -720,7 +720,7 @@
          options.station[1] = c[1];
          options.station[2] = c[2];
          options.station[3] = c[3];
--        sprintf(options.command, "/usr/local/bin/GrabWeather %s", options.station);
+-        sprintf(options.command, PREFIX "/bin/GrabWeather %s", options.station);
 +        sprintf(options.command, "GrabWeather %s", options.station);
          sprintf(options.filename, "%s/.wmWeatherReports/%s.dat",
                  getenv("HOME"), options.station);
  	net_update = FALSE;
-@@ -981,7 +981,7 @@
+@@ -983,7 +983,7 @@
      options.windspeed_unit = 1;
      options.pressure_unit = 1;
      strcpy(options.station, DEFAULT_STATION_ID);
@@ -58,4 +19,5 @@ diff -u gkrellweather-2.0.5.old/gkrellweather.c gkrellweather-2.0.5/gkrellweathe
      sprintf(options.filename, "%s/.wmWeatherReports/%s.dat",
              getenv("HOME"), options.station);
  }
-Only in gkrellweather-2.0.5: gkrellweather.c~
+Only in gkrellweather-2.0.6: gkrellweather.o
+Only in gkrellweather-2.0.6: gkrellweather.so
