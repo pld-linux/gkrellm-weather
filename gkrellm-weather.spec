@@ -1,19 +1,19 @@
+%include	/usr/lib/rpm/macros.perl
 Summary:	A weather plugin for gkrellm
 Summary(pl):	Plugin pokazuj±cy pogodê dla gkrellm
 Summary(pt_BR):	Um plugin gkrellm para acompanhamento das condições climáticas
 Name:		gkrellm-weather
-Version:	2.0.5
-Release:	2
+Version:	2.0.6
+Release:	1
 License:	GPL
 Group:		X11/Applications/Networking
 Source0:	http://kmlinux.fjfi.cvut.cz/~makovick/gkrellm/gkrellweather-%{version}.tgz
 Patch0:		%{name}-paths.patch
 URL:		http://kmlinux.fjfi.cvut.cz/~makovick/gkrellm/index.html
-Requires:	perl
 BuildRequires:	gkrellm-devel >= 2.0.0
 BuildRequires:	gtk+2-devel
+BuildRequires:	rpm-perlprov
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
-
 
 %description
 GKrellWeather is a weather plugin for GKrellM. Its features include:
@@ -69,9 +69,7 @@ rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_libdir}/gkrellm2,%{_bindir}}
 
 %{__make} install \
-	DESTDIR=$RPM_BUILD_ROOT \
-	LIBDIR=%{_libdir} \
-	BINDIR=%{_bindir}
+	PREFIX=$RPM_BUILD_ROOT%{_prefix}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
