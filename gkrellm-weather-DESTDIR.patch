@@ -1,12 +1,39 @@
---- ./Makefile.orig	Mon Oct 30 00:57:04 2000
-+++ ./Makefile	Sun Aug  5 12:18:59 2001
-@@ -22,5 +22,7 @@
- gkrellweather.o: gkrellweather.c
+--- ./Makefile.org	Mon Jan  7 12:26:00 2002
++++ ./Makefile	Mon Jan  7 12:33:53 2002
+@@ -13,6 +13,9 @@
+ 
+ OBJS = gkrellweather.o
+ 
++BINDIR=/usr/X11R6/bin
++LIBDIR=/usr/lib/gkrellm/plugins/
++
+ gkrellweather.so: $(OBJS)
+ 	$(CC) $(OBJS) -o gkrellweather.so $(LFLAGS) $(LIBS)  -lpthread
+ 
+@@ -23,17 +26,17 @@
  
  install:
--	install -c -s -m 644 gkrellweather.so /usr/share/gkrellm/plugins
+ 	if [ -d /usr/lib/gkrellm/plugins/ ] ; then \
+-		install -c -s -m 644 gkrellweather.so /usr/lib/gkrellm/plugins/ ; \
+-	elif [ -d /usr/share/gkrellm/plugins/ ] ; then \
+-		install -c -s -m 644 gkrellweather.so /usr/share/gkrellm/plugins/ ; \
+-	elif [ -d /usr/local/lib/gkrellm/plugins/ ] ; then \
+-		install -c -s -m 644 gkrellweather.so /usr/local/lib/gkrellm/plugins/ ; \
+-	elif [ -d /usr/lib/gkrellm/plugins/ ] ; then \
+-		install -c -s -m 644 gkrellweather.so /usr/lib/gkrellm/plugins/ ; \
++		install -c -s -m 644 gkrellweather.so $(DESTDIR)$(LIBDIR) ; \
++	elif [ -d $(DESTDIR)/usr/share/gkrellm/plugins/ ] ; then \
++		install -c -s -m 644 gkrellweather.so $(DESTDIR)/usr/share/gkrellm/plugins/ ; \
++	elif [ -d $(DESTDIR)/usr/local/lib/gkrellm/plugins/ ] ; then \
++		install -c -s -m 644 gkrellweather.so $(DESTDIR)/usr/local/lib/gkrellm/plugins/ ; \
++	elif [ -d $(DESTDIR)/usr/lib/gkrellm/plugins/ ] ; then \
++		install -c -s -m 644 gkrellweather.so $(DESTDIR)/usr/lib/gkrellm/plugins/ ; \
+ 	else \
+-		install -D -c -s -m 644 gkrellweather.so /usr/lib/gkrellm/plugins/gkrellweather.so ; \
++		install -D -c -s -m 644 gkrellweather.so $(DESTDIR)$(LIBDIR)/gkrellweather.so ; \
+ 	fi
 -	install -c -m 755 GrabWeather /usr/X11R6/bin
-+#	install -s gkrellweather.so $(DESTDIR)$(LIBDIR)/usr/share/gkrellm/plugins
-+#	install GrabWeather $(DESTDIR)$(BINDIR)/usr/X11R6/bin
-+	install -s gkrellweather.so $(DESTDIR)$(LIBDIR)
-+	install GrabWeather $(DESTDIR)$(BINDIR)
++	install -c -m 755 GrabWeather $(DESTDIR)$(BINDIR)
+ 
+ uninstall:
+ 	rm -f /usr/lib/gkrellm/plugins/gkrellweather.so
