@@ -8,6 +8,7 @@ Release:	1
 License:	GPL
 Group:		X11/Applications/Networking
 Source0:	http://kmlinux.fjfi.cvut.cz/~makovick/gkrellm/gkrellweather-%{version}.tgz
+# Source0-md5:	458125fe9276db3733a6c4b0e27eca86
 Patch0:		%{name}-paths.patch
 URL:		http://kmlinux.fjfi.cvut.cz/~makovick/gkrellm/index.html
 BuildRequires:	gkrellm-devel >= 2.0.0
