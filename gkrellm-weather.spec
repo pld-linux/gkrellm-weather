@@ -6,8 +6,6 @@ Version:	0.2.7
 Release:	1
 License:	GPL
 Group:		X11/Applications/Networking
-Group(de):	X11/Applikationen/Netzwerkwesen
-Group(pl):	X11/Aplikacje/Sieciowe
 Source0:	http://www.cse.unsw.edu.au/~flam/repository/c/gkrellm/gkrellweather-%{version}.tar.gz
 Patch0:		%{name}-DESTDIR.patch
 URL:		http://www.cse.unsw.edu.au/~flam/programs/gkrellweather.html
