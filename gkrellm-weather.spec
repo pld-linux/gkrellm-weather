@@ -13,6 +13,7 @@ Patch0:		%{name}-paths.patch
 URL:		http://kmlinux.fjfi.cvut.cz/~makovick/gkrellm/index.html
 BuildRequires:	gkrellm-devel >= 2.0.0
 BuildRequires:	gtk+2-devel
+BuildRequires:	pkgconfig
 BuildRequires:	rpm-perlprov
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
