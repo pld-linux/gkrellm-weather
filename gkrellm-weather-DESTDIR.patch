@@ -1,0 +1,12 @@
+--- ./Makefile.orig	Mon Oct 30 00:57:04 2000
++++ ./Makefile	Sun Aug  5 12:18:59 2001
+@@ -22,5 +22,7 @@
+ gkrellweather.o: gkrellweather.c
+ 
+ install:
+-	install -c -s -m 644 gkrellweather.so /usr/share/gkrellm/plugins
+-	install -c -m 755 GrabWeather /usr/X11R6/bin
++#	install -s gkrellweather.so $(DESTDIR)$(LIBDIR)/usr/share/gkrellm/plugins
++#	install GrabWeather $(DESTDIR)$(BINDIR)/usr/X11R6/bin
++	install -s gkrellweather.so $(DESTDIR)$(LIBDIR)
++	install GrabWeather $(DESTDIR)$(BINDIR)
