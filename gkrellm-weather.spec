@@ -63,7 +63,7 @@ inclui:
 %patch0 -p1
 
 %build
-CFLAGS="%{optflags}"
+CFLAGS="%{rpmcflags}"
 %{__make}
 
 %install
