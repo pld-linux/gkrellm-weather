@@ -2,17 +2,16 @@ Summary:	A weather plugin for gkrellm
 Summary(pl):	Plugin pokazuj±cy pogodê dla gkrellm
 Summary(pt_BR):	Um plugin gkrellm para acompanhamento das condições climáticas
 Name:		gkrellm-weather
-Version:	0.2.7
+Version:	2.0.2
 Release:	1
 License:	GPL
 Group:		X11/Applications/Networking
-Source0:	http://www.cse.unsw.edu.au/~flam/repository/c/gkrellm/gkrellweather-%{version}.tar.gz
+Source0:	http://kmlinux.fjfi.cvut.cz/~makovick/gkrellm/gkrellweather-%{version}.tgz
 Patch0:		%{name}-DESTDIR.patch
-URL:		http://www.cse.unsw.edu.au/~flam/programs/gkrellweather.html
+URL:		http://kmlinux.fjfi.cvut.cz/~makovick/gkrellm/index.html
 Requires:	perl
-BuildRequires:	gkrellm-devel >= 1.0.2
-BuildRequires:	gtk+-devel
-BuildRequires:	imlib-devel
+BuildRequires:	gkrellm-devel >= 2.0.0
+BuildRequires:	gtk+2-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_prefix		/usr/X11R6
@@ -68,10 +67,10 @@ CFLAGS="%{rpmcflags}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{_libdir}/gkrellm,%{_bindir}}
+install -d $RPM_BUILD_ROOT{%{_libdir}/gkrellm2,%{_bindir}}
 
 %{__make} DESTDIR=$RPM_BUILD_ROOT \
-	LIBDIR=%{_libdir}/gkrellm \
+	LIBDIR=%{_libdir}/gkrellm2 \
 	BINDIR=%{_bindir} install
 
 gzip -9nf README ChangeLog
@@ -82,5 +81,5 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc *.gz
-%attr(644,root,root) %{_libdir}/gkrellm/gkrellweather.so
+%attr(644,root,root) %{_libdir}/gkrellm2/gkrellweather.so
 %attr(755,root,root) %{_bindir}/GrabWeather
