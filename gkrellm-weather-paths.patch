@@ -19,5 +19,3 @@ diff -ur gkrellweather-2.0.6.orig/gkrellweather.c gkrellweather-2.0.6/gkrellweat
      sprintf(options.filename, "%s/.wmWeatherReports/%s.dat",
              getenv("HOME"), options.station);
  }
-Only in gkrellweather-2.0.6: gkrellweather.o
-Only in gkrellweather-2.0.6: gkrellweather.so
