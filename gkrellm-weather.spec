@@ -34,7 +34,7 @@ GKrellWeather jest pluginem pokazuj±cym pogodê w GKrellM. Jego
 w³asno¶ci:
 
   - Wybieranie lokalizacji poprzez 4-literowy kod METAR.
-  - Monitorowanie temperatury, dew point, ci¶nienia, wilgotno¶ci, stanu
+  - Monitorowanie temperatury, punktu rosy, ci¶nienia, wilgotno¶ci, stanu
     zachmurzenia, prêdko¶ci i kierunku wiatru.
   - Wy¶wietlanie przy u¿yciu systemu miar anglosaskich (stopnie
     Fareheighta, cale s³upa rtêci, mile na godzinê) jak i metrycznego
