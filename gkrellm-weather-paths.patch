@@ -19,3 +19,20 @@ diff -ur gkrellweather-2.0.6.orig/gkrellweather.c gkrellweather-2.0.6/gkrellweat
      sprintf(options.filename, "%s/.wmWeatherReports/%s.dat",
              getenv("HOME"), options.station);
  }
+--- gkrellweather-2.0.6.orig/Makefile	2003-03-31 13:12:57.000000000 +0200
++++ gkrellweather-2.0.6/Makefile	2004-05-30 11:25:41.336330016 +0200
+@@ -31,13 +31,7 @@
+ 
+ install:
+ 	(cd po && ${MAKE} install )
+-	if [ -d /usr/lib/gkrellm2/plugins/ ] ; then \
+-		install -c -s -m 644 gkrellweather.so /usr/lib/gkrellm2/plugins/ ; \
+-	elif [ -d $(PREFIX)/lib/gkrellm2/plugins/ ] ; then \
+-		install -c -s -m 644 gkrellweather.so $(PREFIX)/lib/gkrellm2/plugins/ ; \
+-	else \
+-		install -D -c -s -m 644 gkrellweather.so $(PREFIX)/lib/gkrellm2/plugins/gkrellweather.so ; \
+-	fi
++	install -D -c -s -m 644 gkrellweather.so $(PREFIX)/lib/gkrellm2/plugins/gkrellweather.so
+ 	install -c -m 755 GrabWeather $(PREFIX)/bin
+ 
+ uninstall:
