@@ -14,7 +14,6 @@ BuildRequires:	gkrellm-devel >= 2.0.0
 BuildRequires:	gtk+2-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define		_prefix		/usr/X11R6
 
 %description
 GKrellWeather is a weather plugin for GKrellM. Its features include:
