@@ -1,8 +1,7 @@
-
 Summary:	a weather plugin for gkrellm
+Summary(es):	a weather plugin for gkrellm
 Summary(pl):	plugin pokazuj±cy pogodê dla gkrellm
 Summary(pt_BR):	Um plugin gkrellm para acompanhamento das condições climáticas
-Summary(es):	a weather plugin for gkrellm
 Name:		gkrellm-weather
 Version:	0.2.3a
 Release:	1
@@ -21,6 +20,19 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %define		_prefix		/usr/X11R6
 
 %description
+GKrellWeather is a weather plugin for GKrellM. Its features include:
+
+  - Choose your own location by 4-letter METAR station identifier code.
+  - Monitor temperature, dew point, pressure, relative humidity, sky
+    condition, wind direction and speed
+  - Display using imperial units (degrees Fareheight, inches of Mercury,
+    miles per hour)
+  - Display using metric units (degrees Celsius, millimeters of Mercury,
+    kilometers per hour)
+  - Display pressure in kPa, hPa and mmHg
+  - Display wind speeds in kmph, mps and beaufort scale
+
+%description -l es
 GKrellWeather is a weather plugin for GKrellM. Its features include:
 
   - Choose your own location by 4-letter METAR station identifier code.
@@ -61,20 +73,6 @@ inclui:
  - Mostrar pressão em kPa, hPa e mmHg
  - Mostrar velocidade do vendo em kmph, mps e escala beaufort
 
-%description -l es
-GKrellWeather is a weather plugin for GKrellM. Its features include:
-
-  - Choose your own location by 4-letter METAR station identifier code.
-  - Monitor temperature, dew point, pressure, relative humidity, sky
-    condition, wind direction and speed
-  - Display using imperial units (degrees Fareheight, inches of Mercury,
-    miles per hour)
-  - Display using metric units (degrees Celsius, millimeters of Mercury,
-    kilometers per hour)
-  - Display pressure in kPa, hPa and mmHg
-  - Display wind speeds in kmph, mps and beaufort scale
-
-
 %prep
 %setup -q -n gkrellweather-%{version}
 %patch0 -p1
@@ -85,7 +83,6 @@ CFLAGS="%{optflags}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
-
 install -d $RPM_BUILD_ROOT{%{_libdir}/gkrellm,%{_bindir}}
 
 %{__make} DESTDIR=$RPM_BUILD_ROOT \
