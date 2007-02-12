@@ -1,7 +1,7 @@
 %include	/usr/lib/rpm/macros.perl
 Summary:	A weather plugin for gkrellm
-Summary(pl):	Plugin pokazuj±cy pogodê dla gkrellm
-Summary(pt_BR):	Um plugin gkrellm para acompanhamento das condições climáticas
+Summary(pl.UTF-8):   Plugin pokazujÄ…cy pogodÄ™ dla gkrellm
+Summary(pt_BR.UTF-8):   Um plugin gkrellm para acompanhamento das condiÃ§Ãµes climÃ¡ticas
 Name:		gkrellm-weather
 Version:	2.0.7
 Release:	1
@@ -30,32 +30,32 @@ GKrellWeather is a weather plugin for GKrellM. Its features include:
   - Display pressure in kPa, hPa and mmHg
   - Display wind speeds in kmph, mps and beaufort scale
 
-%description -l pl
-GKrellWeather jest pluginem pokazuj±cym pogodê w GKrellM. Jego
-w³asno¶ci:
+%description -l pl.UTF-8
+GKrellWeather jest pluginem pokazujÄ…cym pogodÄ™ w GKrellM. Jego
+wÅ‚asnoÅ›ci:
 
   - Wybieranie lokalizacji poprzez 4-literowy kod METAR.
-  - Monitorowanie temperatury, punktu rosy, ci¶nienia, wilgotno¶ci, stanu
-    zachmurzenia, prêdko¶ci i kierunku wiatru.
-  - Wy¶wietlanie przy u¿yciu systemu miar anglosaskich (stopnie
-    Fareheighta, cale s³upa rtêci, mile na godzinê) jak i metrycznego
-    (stopnie Celsjusza, milimetry s³upa rtêci, kilometry na godzinê)
-  - wy¶wietlanie ci¶nienia w kPa, hPa i mmHg
-  - wy¶wietlanie prêdko¶ci wiatru w km/h, m/s i w skali Beauforta
+  - Monitorowanie temperatury, punktu rosy, ciÅ›nienia, wilgotnoÅ›ci, stanu
+    zachmurzenia, prÄ™dkoÅ›ci i kierunku wiatru.
+  - WyÅ›wietlanie przy uÅ¼yciu systemu miar anglosaskich (stopnie
+    Fareheighta, cale sÅ‚upa rtÄ™ci, mile na godzinÄ™) jak i metrycznego
+    (stopnie Celsjusza, milimetry sÅ‚upa rtÄ™ci, kilometry na godzinÄ™)
+  - wyÅ›wietlanie ciÅ›nienia w kPa, hPa i mmHg
+  - wyÅ›wietlanie prÄ™dkoÅ›ci wiatru w km/h, m/s i w skali Beauforta
 
-%description -l pt_BR
-Um plugin gkrellm para acompanhamento das condições climáticas,
+%description -l pt_BR.UTF-8
+Um plugin gkrellm para acompanhamento das condiÃ§Ãµes climÃ¡ticas,
 inclui:
 
- - Escolha sua localização através de um código de identificação de 4
-   letras (estação METAR)
- - Monitora temperatura, pressão, ponto de orvalho, umidade relativa,
-   condições atmosféricas, direção e velocidade do vento
+ - Escolha sua localizaÃ§Ã£o atravÃ©s de um cÃ³digo de identificaÃ§Ã£o de 4
+   letras (estaÃ§Ã£o METAR)
+ - Monitora temperatura, pressÃ£o, ponto de orvalho, umidade relativa,
+   condiÃ§Ãµes atmosfÃ©ricas, direÃ§Ã£o e velocidade do vento
  - Mostrar usando o sistema imperial de medidas (graus Fareheight,
-   polegadas de mercúrio, milhas por hora)
- - Mostrar usando o sistema métrico (graus Célsius, milímetros de
-   mercúrio, kilômetros por hora)
- - Mostrar pressão em kPa, hPa e mmHg
+   polegadas de mercÃºrio, milhas por hora)
+ - Mostrar usando o sistema mÃ©trico (graus CÃ©lsius, milÃ­metros de
+   mercÃºrio, kilÃ´metros por hora)
+ - Mostrar pressÃ£o em kPa, hPa e mmHg
  - Mostrar velocidade do vendo em kmph, mps e escala beaufort
 
 %prep
