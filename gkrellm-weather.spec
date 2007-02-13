@@ -1,7 +1,7 @@
 %include	/usr/lib/rpm/macros.perl
 Summary:	A weather plugin for gkrellm
-Summary(pl.UTF-8):   Plugin pokazujący pogodę dla gkrellm
-Summary(pt_BR.UTF-8):   Um plugin gkrellm para acompanhamento das condições climáticas
+Summary(pl.UTF-8):	Plugin pokazujący pogodę dla gkrellm
+Summary(pt_BR.UTF-8):	Um plugin gkrellm para acompanhamento das condições climáticas
 Name:		gkrellm-weather
 Version:	2.0.7
 Release:	1
